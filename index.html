@@ -1,0 +1,141 @@
+<!-- This is the index html -->
+<!DOCTYPE html>
+<html>
+
+<!-- Config and website settings (Includes loading css file)-->
+<head>
+<title>Luuk van Berkel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>  
+</head>
+
+<body style="margin: 0px;">
+
+
+    <!-- Button bar this holds all the buttons-->
+    <div class="menubartransparant" id="webcontrol" style="z-index: 1;">
+        <!-- Settingsbar with hamburg menu and language -->
+        <div class="setbar">
+            <div class="hamcontainer" onclick="hamAnimation(this)">
+                <div class="hambar1"></div>
+                <div class="hambar2"></div>
+                <div class="hambar3"></div>
+            </div>
+
+            <div class="setdiv"></div>
+
+            <!-- NOTE: Making with flag-->
+            <div class="langcontainer">
+                <h1 class="langlanguage" id="lang" onclick="langLogic(this)">NL</h1>
+            </div>
+        </div>
+
+        <p class="nametagwhite">Luuk van Berkel</p>
+
+        <!-- Linkin button for linkin link-->
+        <a class="linkinbutton" href="https://nl.linkedin.com/in/luuk-van-berkel-b60564231">
+            <i class='fa fa-linkedin' style='color: white; margin-left: 4px; font-size:37px'></i>
+        </a>
+
+        <!-- Github button for git link-->
+        <a class="githubbutton" href="https://github.com/LuukBerkel">
+            <i class='fa fa-github' style='color: white; margin-left: 4px; font-size:37px'></i>
+        </a>
+    </div>
+
+
+    <!--Video container holds all the video and other parrts for the container-->
+    <div>
+        <p class="smallbar" style="z-index: -1;" id="more">Scroll voor meer<br>↓</p>
+        <img src="ik.jpg" style="z-index: 0;" alt="Me" class="myimage">
+
+        <video id="intro" width="100%" style="position:absolute; z-index: -2;  object-fit: cover;  background-size: cover;
+        overflow: hidden;" autoplay muted loop>
+            <source src="improved.mp4" type="video/mp4">
+            Your browser does not support HTML video.
+        </video>
+        
+        <svg viewBox="0 0 120 120" style="z-index: -2;">
+            <circle cx="0" cy="30px" r="23" class="dotted" style="z-index: -2;"/>
+            <foreignObject x="5" y="5" height="100px" width="100px" style="z-index: -2;">
+            </foreignObject>
+        </svg>
+
+        <p class="what"  style="z-index: -1;" id="dis">Student Technische Informatica<br>Avans Hogeschool<br><br>Op weg naar Embedded Software Engineer<p></p>
+    
+    </div>
+
+    <!--Over me container-->
+    <div id="overmebox" style="position: absolute; top: 100%; width: 100%;     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+        <div class="mylinediv"></div>
+        <h1 class="mytitle"> Over mij </h1>
+        <p>Ik ben student op technische informatica op het avans in breda.
+            Hierbij leer ik verschillende richtingen die ik op kan gaan zoals visualisatie. 
+            Ook mobile development en embedded systems. Hierbij leer ik werken in verschillende ontwikkel
+            omgevingen.
+            
+        </p>
+    </div>
+
+  
+    
+
+</body>
+
+
+<!-- For the working of the site-->
+<script>   
+    //Bootup sequence of site
+    init();
+    function init(){
+        rescaler();
+    }
+
+    //Setting on event listeners
+    window.onresize = function () {
+       rescaler();
+    }
+
+    window.onscroll = function() { 
+        recolor();
+    }
+
+    function rescaler(){
+        console.log("Rescale event.");
+        document.getElementById("intro").height = window.innerHeight;
+    }
+
+    function recolor(){
+         console.log("Color event."); 
+        // if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
+        //     document.getElementById("webcontrol").className = "menubarwhite";
+        // } else {
+        //     document.getElementById("webcontrol").className = "menubartransparant";
+        // }
+    }
+
+    
+    //Making event functions
+    function hamAnimation(x) {
+        console.log("Menu event."); 
+        x.classList.toggle("change");
+    }
+
+    function langLogic(x){
+        console.log("Menu event."); 
+        if (document.getElementById("lang").innerText == "NL"){
+            // Changing elements to english
+            document.getElementById("lang").innerHTML= "EN"
+            document.getElementById("dis").innerHTML = "Student Technical Informatics<br>Avans University of Applied Sciences <br><br>On my way to Embedded Software Engineer"
+            document.getElementById("more").innerHTML = "Scroll for more<br>↓"
+        } else {
+            // Changing elements to dutch
+            document.getElementById("lang").innerHTML = "NL";
+            document.getElementById("dis").innerHTML = "Student Technische Informatica<br>Avans Hogeschool <br><br>Op weg naar Embedded Software Engineer"
+            document.getElementById("more").innerHTML = "Scroll voor meer<br>↓"
+        }
+    }
+</script>
+
+</html>
