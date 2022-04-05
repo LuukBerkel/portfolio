@@ -1,6 +1,10 @@
 //Bootup sequence of site
 init();
 function init(){
+
+    // Booting twice else sometimes it will not center all correctly...
+    // IDK  why but yeah.........
+    rescaler();
     rescaler();
 }
 
@@ -25,7 +29,11 @@ function rescaler(){
         
         var text = document.getElementById("mytext");
         text.style = "margin-left:50px; margin-right:50px; margin-top:0px;";
-        text.style.fontSize = "42px";
+        text.style.fontSize = "40px";
+
+        var more = document.getElementById("more");
+        more.style = "width: 300px; height: 75px; margin-left: " + ((window.innerWidth - 300) / 2) + "px; font-size:30px;";
+        document.getElementById("name").innerHTML = "Luuk van Berkel"
     } else {
         document.getElementById("myid").style = "display: inline; align-items: center; position: absolute;  overflow: hidden; top: 100px;";
 
@@ -35,17 +43,19 @@ function rescaler(){
    
         var text = document.getElementById("mytext");
         text.style = "margin-left: " + ((window.innerWidth - text.getBoundingClientRect().width) / 2) + "px; margin-right:0px; margin-top:10px;";
-        text.style.fontSize = "25px"
+        text.style.fontSize = "23px"
+        
+        var more = document.getElementById("more");
+        more.style = "width: 170px; height: 25px; margin-left: " + ((window.innerWidth - 170) / 2) + "px; font-size:20px;";
+        document.getElementById("name").innerHTML = ""
     }
 }
 
-
-//Making event functions
+//Making animationsfunctions
 function hamAnimation(x) {
     console.log("Menu event."); 
     x.classList.toggle("change");
 }
-
 
 //TODO fix and make cleaner
 function langLogic(x){
