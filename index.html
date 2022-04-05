@@ -6,13 +6,14 @@
 <head>
 <title>Luuk van Berkel</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles/standard.css">
+<link rel="stylesheet" href="styles/menubar.css">
+<link rel="stylesheet" href="styles/homepage.css">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>  
 </head>
 
+
 <body style="margin: 0px;">
-
-
     <!-- Button bar this holds all the buttons-->
     <div class="menubartransparant" id="webcontrol" style="z-index: 1;">
         <!-- Settingsbar with hamburg menu and language -->
@@ -44,26 +45,20 @@
         </a>
     </div>
 
-
     <!--Video container holds all the video and other parrts for the container-->
     <div>
-        <p class="smallbar" style="z-index: -1;" id="more">Scroll voor meer<br>↓</p>
-        <img src="media/myintro.jpg" style="z-index: 0;" alt="Me" class="myimage">
+        <div id="myid" style="width: 80%; left: 10%; top: 100px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; position: absolute;  overflow: hidden;">
+                <img id= "myimage" src="media/myintro.jpg" style="z-index: 0;" alt="Me" class="myimage" >
+                <p id="mytext"class="what"  style="z-index: -1;" id="dis">Student Technische Informatica<br>Avans Hogeschool<br><br>Op weg naar Embedded Software Engineer<p></p>
+        </div>
 
+        <p class="smallbar" style="z-index: -1;" id="more">Scroll voor meer<br>↓</p>
+       
         <video id="intro" width="100%" style="position:absolute; z-index: -2;  object-fit: cover;  background-size: cover;
         overflow: hidden;" autoplay muted loop>
             <source src="media/websiteintro.mp4" type="video/mp4">
             Your browser does not support HTML video.
         </video>
-        
-        <svg viewBox="0 0 120 120" style="z-index: -2;">
-            <circle cx="0" cy="30px" r="23" class="dotted" style="z-index: -2;"/>
-            <foreignObject x="5" y="5" height="100px" width="100px" style="z-index: -2;">
-            </foreignObject>
-        </svg>
-
-        <p class="what"  style="z-index: -1;" id="dis">Student Technische Informatica<br>Avans Hogeschool<br><br>Op weg naar Embedded Software Engineer<p></p>
-    
     </div>
 
     <!--Over me container-->
@@ -83,59 +78,6 @@
 
 </body>
 
-
-<!-- For the working of the site-->
-<script>   
-    //Bootup sequence of site
-    init();
-    function init(){
-        rescaler();
-    }
-
-    //Setting on event listeners
-    window.onresize = function () {
-       rescaler();
-    }
-
-    window.onscroll = function() { 
-        recolor();
-    }
-
-    function rescaler(){
-        console.log("Rescale event.");
-        document.getElementById("intro").height = window.innerHeight;
-    }
-
-    function recolor(){
-         console.log("Color event."); 
-        // if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
-        //     document.getElementById("webcontrol").className = "menubarwhite";
-        // } else {
-        //     document.getElementById("webcontrol").className = "menubartransparant";
-        // }
-    }
-
-    
-    //Making event functions
-    function hamAnimation(x) {
-        console.log("Menu event."); 
-        x.classList.toggle("change");
-    }
-
-    function langLogic(x){
-        console.log("Menu event."); 
-        if (document.getElementById("lang").innerText == "NL"){
-            // Changing elements to english
-            document.getElementById("lang").innerHTML= "EN"
-            document.getElementById("dis").innerHTML = "Student Technical Informatics<br>Avans University of Applied Sciences <br><br>On my way to Embedded Software Engineer"
-            document.getElementById("more").innerHTML = "Scroll for more<br>↓"
-        } else {
-            // Changing elements to dutch
-            document.getElementById("lang").innerHTML = "NL";
-            document.getElementById("dis").innerHTML = "Student Technische Informatica<br>Avans Hogeschool <br><br>Op weg naar Embedded Software Engineer"
-            document.getElementById("more").innerHTML = "Scroll voor meer<br>↓"
-        }
-    }
-</script>
+<script type="text/javascript" src="js/homepage.js"></script>
 
 </html>
