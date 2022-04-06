@@ -64,11 +64,11 @@ function langLogic(x){
         // Changing elements to english
         document.getElementById("lang").innerHTML= "EN";
         document.getElementById("mytext").innerHTML = "Student Technical Informatics<br>Avans University of Applied Sciences <br><br>On my way to Embedded Software Engineer";
-        document.getElementById("more").innerHTML = "Scroll for more<br>↓";
+        document.getElementById("more").innerHTML = "Scroll for more";
     } else {
         // Changing elements to dutch
         document.getElementById("lang").innerHTML = "NL";
         document.getElementById("mytext").innerHTML = "Student Technische Informatica<br>Avans Hogeschool <br><br>Op weg naar Embedded Software Engineer";
-        document.getElementById("more").innerHTML = "Scroll voor meer<br>↓";
+        document.getElementById("more").innerHTML = "Scroll voor meer";
     }
 }
