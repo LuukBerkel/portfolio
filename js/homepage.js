@@ -21,7 +21,7 @@ function rescaler(){
 
     // Changing overlay
     if (window.innerWidth > 1000){
-        document.getElementById("myid").style = "width: 80%; height: " + window.innerHeight + "; left: 10%; top: 100px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; position: absolute; ";
+        document.getElementById("myid").style = "width: 80%; height: " + window.innerHeight + "px; left: 10%; top: 100px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; position: absolute; ";
         
         var image  = document.getElementById("myimage");
         image.height = (window.innerHeight - 200);
@@ -32,10 +32,10 @@ function rescaler(){
         text.style.fontSize = "40px";
 
         var more = document.getElementById("more");
-        more.style = "width: 300px; height: 75px; margin-left: " + ((window.innerWidth - 300) / 2) + "px; font-size:30px;";
+        more.style = "width: 300px; height: 50px; margin-left: " + ((window.innerWidth - 300) / 2) + "px; font-size:30px;";
         document.getElementById("name").innerHTML = "Luuk van Berkel"
     } else {
-        document.getElementById("myid").style = "display: inline; align-items: center; height: " + window.innerHeight + "; position: absolute;  overflow: hidden; top: 100px;";
+        document.getElementById("myid").style = "display: inline; align-items: center; height: " + window.innerHeight + "px; position: absolute;  overflow: hidden; top: 100px;";
 
         var image = document.getElementById("myimage");
         image.height = (window.innerHeight /3) * 1.3;
