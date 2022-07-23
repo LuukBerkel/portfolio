@@ -17,16 +17,20 @@ window.onresize = function () {
 // And yes I know there is probably a css trick but i am to lazy to learn it (-;).
 function rescaler(){
     console.log("Rescale event." + window.innerWidth);
+
+    var windowWidth = window.innerWidth;
+    var windowHeight = window.innerHeight;
+
     // Changing vid
-    document.getElementById("intro").height = window.innerHeight
+    document.getElementById("intro").height = windowHeight;
     
- 
     // Chaning background image
-    document.getElementById("myimager").height =  window.innerHeight -200;
-    if (document.getElementById("myimager").height > window.innerWidth){
-        document.getElementById("myimager").height = window.innerWidth;
+    document.getElementById("myimager").height =  windowHeight -200;
+    if (document.getElementById("myimager").height > windowWidth){
+        document.getElementById("myimager").height = windowWidth -17;
+        console.log("Rescale event horz." + windowWidth) -17;
     }
-    document.getElementById("myimager").style = "margin-top:" + ( window.innerHeight -   document.getElementById("myimager").height)/2 + "px;";
+    document.getElementById("myimager").style = "margin-top:" + ( windowHeight -   document.getElementById("myimager").height)/2 + "px;";
 
     // Calculting margin
     document.getElementById("mytext").style = "width:" +(document.getElementById("myimager").width -50) +"px; font-size:" + 35.0 * (  document.getElementById("myimager").height / 609.0) +"px;";
@@ -35,11 +39,12 @@ function rescaler(){
    
 
     // Changing overlay
-    if (window.innerWidth > 1000){
+    if (windowWidth > 1000){
         document.getElementById("name").innerHTML = "Luuk van Berkel"
     } else {;
         document.getElementById("name").innerHTML = ""
     }
+
 }
 
 var navState = false;
