@@ -10,46 +10,41 @@ function init(){
 
 //Setting on event listeners
 window.onresize = function () {
-   rescaler();
+    rescaler();
 }
 
-
+// Rescaling with java script of the display elements
+// And yes I know there is probably a css trick but i am to lazy to learn it (-;).
 function rescaler(){
     console.log("Rescale event." + window.innerWidth);
     // Changing vid
-    document.getElementById("intro").height = window.innerHeight;
+    document.getElementById("intro").height = window.innerHeight
+    
+ 
+    // Chaning background image
+    document.getElementById("myimager").height =  window.innerHeight -200;
+    if (document.getElementById("myimager").height > window.innerWidth){
+        document.getElementById("myimager").height = window.innerWidth;
+    }
+    document.getElementById("myimager").style = "margin-top:" + ( window.innerHeight -   document.getElementById("myimager").height)/2 + "px;";
+    document.getElementById("mytext").height =  document.getElementById("myimager").height;
+
+    // Calculting margin
+    document.getElementById("mytext").style = "margin-top:" + ( window.innerHeight -  document.getElementById("mytext").height)/2 + "px; font-size:" + 24.0 * (  document.getElementById("myimager").height / 609.0) +"px;";
+    console.log(document.getElementById("mytext").height);
+   
 
     // Changing overlay
     if (window.innerWidth > 1000){
-        document.getElementById("myid").style = "width: 80%; height: " + window.innerHeight + "px; left: 10%; top: 100px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; position: absolute; ";
-        
-        var image  = document.getElementById("myimage");
-        image.height = (window.innerHeight - 200);
-        image.style = "margin-left: " + 0 + "px;";
-        
-        var text = document.getElementById("mytext");
-        text.style = "margin-left:50px; margin-right:50px; margin-top:0px;";
-        text.style.fontSize = "40px";
-
-        var more = document.getElementById("more");
-        more.style = "width: 300px; height: 50px; margin-left: " + ((window.innerWidth - 300) / 2) + "px; font-size:30px;";
         document.getElementById("name").innerHTML = "Luuk van Berkel"
-    } else {
-        document.getElementById("myid").style = "display: inline; align-items: center; height: " + window.innerHeight + "px; position: absolute;  overflow: hidden; top: 100px;";
-
-        var image = document.getElementById("myimage");
-        image.height = (window.innerHeight /3) * 1.3;
-        image.style = "margin-left: " + ((window.innerWidth - image.width) / 2)  + "px;";
-   
-        var text = document.getElementById("mytext");
-        text.style = "margin-left: " + ((window.innerWidth - text.getBoundingClientRect().width) / 2) + "px; margin-right:0px; margin-top:10px;";
-        text.style.fontSize = "23px"
-        
-        var more = document.getElementById("more");
-        more.style = "width: 170px; height: 25px; margin-left: " + ((window.innerWidth - 170) / 2) + "px; font-size:20px;";
+    } else {;
         document.getElementById("name").innerHTML = ""
     }
 }
+
+
+
+
 
 //Making animationsfunctions
 function hamAnimation(x) {

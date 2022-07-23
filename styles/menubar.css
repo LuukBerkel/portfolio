@@ -122,11 +122,11 @@
     text-decoration:none;
 }
 
-.nametagwhite {
+.nametaggreen {
     position: fixed;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
-    color: white;
+    color: #0fc497;
     margin: 15px;
     margin-top: 20px;
     left: 140px;
