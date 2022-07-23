@@ -42,12 +42,27 @@ function rescaler(){
     }
 }
 
+var navState = false;
+function openNav() {
+    document.getElementById("mySidepanel").style.width = "250px";
+}
+  
+function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+}
 
 
 
 
 //Making animationsfunctions
 function hamAnimation(x) {
+    if (!navState){
+    openNav();
+    navState = true;
+    } else {
+        closeNav();
+        navState = false;
+    }
     console.log("Menu event."); 
     x.classList.toggle("change");
 }
