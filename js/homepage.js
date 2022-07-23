@@ -27,10 +27,10 @@ function rescaler(){
         document.getElementById("myimager").height = window.innerWidth;
     }
     document.getElementById("myimager").style = "margin-top:" + ( window.innerHeight -   document.getElementById("myimager").height)/2 + "px;";
-    document.getElementById("mytext").height =  document.getElementById("myimager").height;
 
     // Calculting margin
-    document.getElementById("mytext").style = "margin-top:" + ( window.innerHeight -  document.getElementById("mytext").height)/2 + "px; font-size:" + 24.0 * (  document.getElementById("myimager").height / 609.0) +"px;";
+    document.getElementById("mytext").style = "width:" +(document.getElementById("myimager").width -50) +"px; font-size:" + 35.0 * (  document.getElementById("myimager").height / 609.0) +"px;";
+    document.getElementById("more").style = "font-size:" + 25.0 * (  document.getElementById("myimager").height / 609.0) +"px;";
     console.log(document.getElementById("mytext").height);
    
 
@@ -59,11 +59,9 @@ function langLogic(x){
         // Changing elements to english
         document.getElementById("lang").innerHTML= "EN";
         document.getElementById("mytext").innerHTML = "Student Technical Informatics<br>Avans University of Applied Sciences <br><br>On my way to Embedded Software Engineer";
-        document.getElementById("more").innerHTML = "Scroll for more";
     } else {
         // Changing elements to dutch
         document.getElementById("lang").innerHTML = "NL";
         document.getElementById("mytext").innerHTML = "Student Technische Informatica<br>Avans Hogeschool <br><br>Op weg naar Embedded Software Engineer";
-        document.getElementById("more").innerHTML = "Scroll voor meer";
     }
 }

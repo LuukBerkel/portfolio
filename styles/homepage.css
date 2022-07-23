@@ -6,27 +6,38 @@
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     margin-bottom: 0px;
-    color: white;
+    color: #0fc497;
     bottom: 0;
     background-color: white;
     box-shadow:  0 -4px 8px 0 rgba(0, 0, 0, 0.2) ,  0 -6px   20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    padding-bottom: 5px;
+
+
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
 
 .myimage{
     display: absolute;
     border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color:#0fc49771;
 }
 
 /* my discription*/
 .what{
     position: absolute;
-    top: 0;
+
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     z-index: 100;
-    width: 100%;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    color: black;
+    color: white;
 }
 
 /* over me*/
