@@ -1,0 +1,10 @@
+{
+    "language" : "dutch",
+    "text" : [
+        {"key" : "homepage-night", "value" : "Goedenavond &#127771,<br><br>" },
+        {"key" : "homepage-evening", "value" : "Goedenacht &#127776,<br><br>" },
+        {"key" : "homepage-afternoon", "value" : "Goedemorgen &#127773,<br><br>" },
+        {"key" : "homepage-morning", "value" : "Goedemiddag &#127774,<br><br>" },
+        {"key" : "homepage-slogon", "value" : "Ik ben een student<br>Technische Informatica.<br><br>Op weg naar Embedded Software Engineer."}
+    ]
+}
