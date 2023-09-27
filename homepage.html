@@ -15,8 +15,6 @@
 
 
 <body style="margin: 0px;">
-
-
     <!-- Button bar this holds all the buttons-->
     <div class="menubarwhite" id="webcontrol" style="z-index: 1;">
         <!-- Settingsbar with hamburg menu and language -->
@@ -31,7 +29,7 @@
 
             <!-- NOTE: Making with flag-->
             <div class="langcontainer">
-                <h1 class="langlanguage" id="lang" onclick="langLogic(this)">NL</h1>
+                <h1 class="langlanguage" id="lang" onclick="buttonLang()">NL</h1>
             </div>
         </div>
 
@@ -58,7 +56,7 @@
 
         <div style="text-align: center;">
             <img id= "myimager" src="media/pattern.png" style="z-index: 0;" alt="idk" class="myimage" >
-                <p id="mytext" class="what" style="z-index: 1;" id="dis">Student Technische Informatica<br>Avans Hogeschool<br><br>Op weg naar Embedded Software Engineer</p>
+                <p id="mytext" class="what" style="z-index: 1;" id="dis"></p>
             </img>
         </div>
 
@@ -69,27 +67,31 @@
     </div>
 
     <!--Over me container-->
-    <div id="overmebox" style="position: absolute; top: 100%; width: 100%;     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <div class="overmebox" id="overmeid">
         <div class="mylinediv"></div>
-        <h1 class="mytitle"> Over mij </h1>
-        <p><strong>Ik ben student op technische informatica op het avans in breda.
-            Hierbij leer ik verschillende richtingen die ik op kan gaan zoals visualisatie. 
-            Ook mobile development en embedded systems. Hierbij leer ik werken in verschillende ontwikkel
-            omgevingen.</strong>
-            
-        </p>
+
+        <div>
+            <h1 class="mytitle"> Over mij </h1>
+            <p><strong>Ik ben student op technische informatica op het avans in breda.
+                Hierbij leer ik verschillende richtingen die ik op kan gaan zoals visualisatie. 
+                Ook mobile development en embedded systems. Hierbij leer ik werken in verschillende ontwikkel
+                omgevingen.</strong>
+                
+            </p>
+        </div>
     </div>
   
-
+    <!--Sidepanel data-->
     <div id="mySidepanel" class="sidepanel">
         <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
+        <a href="#">Projects</a>
+        <a href="#">Skills</a>
         <a href="#">Contact</a>
       </div>
 
 </body>
 
-<script type="text/javascript" src="js/homepage.js"></script>
+<script type="text/javascript" src="js/animations.js"></script>
+<script type="text/javascript" src="js/languages.js"></script>
 
 </html>
