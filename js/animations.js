@@ -52,12 +52,22 @@ function closeNav() {
 //Making animationsfunctions
 function hamAnimation(x) {
     if (!navState){
-    openNav();
-    navState = true;
+        openNav();
+        navState = true;
     } else {
         closeNav();
         navState = false;
     }
     console.log("Menu event."); 
     x.classList.toggle("change");
+}
+
+function hamClose(x) {
+    const hamContainer = document.querySelector('.hamcontainer');
+
+    closeNav();
+    navState = false;
+    hamContainer.classList.toggle("change"); 
+    
+    console.log("Menu event."); 
 }

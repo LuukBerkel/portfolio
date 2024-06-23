@@ -71,8 +71,8 @@
         <div class="mylinediv"></div>
 
 
-        <div class="overmebox">
-            <p class="mytitle"><u>Over mij</u></p>
+        <div id= "overme" class="overmebox">
+            <p id= "myprofile" class="mytitle"><u></u></p>
             <p id= "mydesc" class="mydesc">Als student Technische Informatica aan Avans in Breda specialiseer ik me voornamelijk in graphics, embedded systems, backend development en robotic engineering. 
                 Deze opleiding biedt een grondige verkenning van deze vakgebieden, waarbij ik leer om complexe grafische systemen te ontwerpen, efficiënte embedded systemen te ontwikkelen, robuuste backend-oplossingen te bouwen en innovatieve robotica-toepassingen te implementeren. 
                 Door middel van praktische projecten en intensieve samenwerkingen binnen diverse ontwikkelomgevingen, verwerf ik zowel theoretische kennis als waardevolle praktijkervaring. 
@@ -82,19 +82,30 @@
             <img id="myimage" class="myimage" src="media/what.png" > 
      
         </div>
+
+        <div id="overexperience" class="overexperiencebox">
+            <p id= "myexperience" class="mytitle"><u>Ervaring</u></p>
+            <img class="myexperience" src="media/experience-hor.png" > 
+     
+        </div>
     </div>
   
     <!--Sidepanel data-->
     <div id="mySidepanel" class="sidepanel">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Experience</a>
-        <a href="#">Skills</a>
+        <a href="#" onclick="hamClose(this)"  >Startpagina</a>
+        <a href="#overme" onclick="hamClose(this)" >Profiel</a>
+        <a href="#overexperience" onclick="hamClose(this)" >Ervaring</a>
     </div>
-
 </body>
+
+<!--Sidepanel data-->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script type="text/javascript" src="js/animations.js"></script>
 <script type="text/javascript" src="js/languages.js"></script>
+<script type="text/javascript" src="js/scroll.js"></script>
+
 
 </html>

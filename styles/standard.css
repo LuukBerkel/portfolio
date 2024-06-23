@@ -13,3 +13,6 @@ li
     display: inline;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
