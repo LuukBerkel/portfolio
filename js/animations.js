@@ -18,14 +18,14 @@ function rescaler(){
     document.getElementById("intro").height = windowHeight;
 
     // Changing background image
-    document.getElementById("myimager").height =  windowHeight -200;
-    if (document.getElementById("myimager").height > windowWidth){
-        document.getElementById("myimager").height = windowWidth -17;
-    }
-    document.getElementById("myimager").style = "margin-top:" + ( windowHeight -   document.getElementById("myimager").height)/2 + "px;";
+    // document.getElementById("myimager").height =  windowHeight -200;
+    // if (document.getElementById("myimager").height > windowWidth){
+    //     document.getElementById("myimager").height = windowWidth -17;
+    // }
+    // document.getElementById("myimager").style = "margin-top:" + ( windowHeight -   document.getElementById("myimager").height)/2 + "px;";
 
     // Calculting margin
-    document.getElementById("mytext").style = "width:" +(document.getElementById("myimager").width -50) +"px; font-size:" + 35.0 * (  document.getElementById("myimager").height / 609.0) +"px;";
+    // document.getElementById("mytext").style = "width:" +(document.getElementById("myimager").width -50) +"px; font-size:" + 35.0 * (  document.getElementById("myimager").height / 609.0) +"px;";
     document.getElementById("more").style = "font-size:" + 25.0 * (  document.getElementById("myimager").height / 609.0) +"px;";
     document.getElementById("mydesc").style = "font-size:" + 23.0 * (  document.getElementById("myimager").height / 609.0) +"px;";
    

@@ -19,7 +19,7 @@
 }
 
 .mypattern{
-    display: absolute;
+    position: absolute;
     border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color:#17151591;
@@ -48,7 +48,7 @@
 }
 
 .background {
-    --s: 100px; /* control the size */
+    --s: 100px; 
     position: absolute;
     top: 100%;
     width: 100%;     
@@ -88,18 +88,18 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     margin: 30px;
-    max-width: 100%; /* Ensure text doesn't overflow */
+    max-width: 100%; 
     max-height: 100%;
 
-    flex: 1; /* Allow text to take up remaining space */
-    flex: 1 1 auto; /* Allow text to grow and shrink */
+    flex: 1; 
+    flex: 1 1 auto;
 }
 
 .myimage {
-    max-width: 100%; /* Ensure image does not exceed container width */
-    max-height: 50%; /* Limit image height to 50% of container height */
-    object-fit: contain; /* Maintain aspect ratio */
-    margin-top: auto; /* Push image to bottom */
+    max-width: 100%;
+    max-height: 50%; 
+    object-fit: contain; 
+    margin-top: auto; 
 }
 
 .overexperiencebox {

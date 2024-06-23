@@ -1,0 +1,24 @@
+#myimager {
+    max-height: 80vh;
+    max-width: 100%; /* Adjust as needed */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    display: block; /* Ensures block-level behavior */
+    margin: auto;
+    top: 10vh;
+    bottom: 10vh;
+}
+
+#mytext {
+    width: calc(100% - 50px); /* Adjust as needed */
+    margin: 20px; /* Adjust margin as needed */
+    font-size: calc((3vw + 3vh) / 2);
+}
+
+@media (min-width: 1000px) {
+    #myimager {
+        height: 80vh;
+        max-width: 70vw; 
+        left: 15vw;
+        right: 15vw;
+    }
+}
