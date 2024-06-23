@@ -87,7 +87,7 @@
     margin: 30px;
 
     flex: 1; /* Allow text to take up remaining space */
-    overflow-y: auto; /* Enable vertical scrolling if needed */
+    flex-shrink: 1;
 }
 
 .myimage {
