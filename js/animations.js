@@ -16,8 +16,7 @@ function rescaler(){
 
     // Changing vid
     document.getElementById("intro").height = windowHeight;
-    document.getElementById("overmeid").height = windowHeight;
-    
+
     // Changing background image
     document.getElementById("myimager").height =  windowHeight -200;
     if (document.getElementById("myimager").height > windowWidth){
@@ -31,9 +30,11 @@ function rescaler(){
    
     // Changing overlay
     if (windowWidth > 1000){
-        document.getElementById("name").innerHTML = "Luuk van Berkel"
-    } else {;
-        document.getElementById("name").innerHTML = ""
+        document.getElementById("name").style = "display: flex";
+        document.getElementById("myimage").style = "display: flex";
+    } else {
+        document.getElementById("name").style = "display: none";
+        document.getElementById("myimage").style = "display: none";
     }
 
 }

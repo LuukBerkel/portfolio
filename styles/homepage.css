@@ -18,7 +18,7 @@
     transform: translate(-50%, 0%);
 }
 
-.myimage{
+.mypattern{
     display: absolute;
     border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -34,7 +34,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    z-index: 1;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
@@ -45,26 +44,61 @@
     position: absolute;
     width: 100%;
     height: 10px;
-    margin-bottom: 5px;
     background-color: #0fc497;
 }
 
-.mytitle{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
-    height: 100%;
-    color: #0fc497;
-    margin: 15px;
-}
-
-.overmebox {
+.background {
     --s: 100px; /* control the size */
     position: absolute;
     top: 100%;
     width: 100%;     
-    height: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 100vh;
     background: white
     url(../media/tic-tacsvg.svg);
+    box-sizing: border-box; 
+    overflow: hidden; 
 }
-  
+
+.overmebox {
+    position: absolute;
+    background-color: white; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 20px; 
+    width: 90%; 
+    height: 80vh;
+    margin-bottom:  10vh;
+    margin-top: 10vh;
+    margin-left:  5%;
+    margin-right: 5%;
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+}
+
+.mytitle{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: #0fc497;
+    margin: 30px;
+}
+
+.mytext{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    margin: 30px;
+    flex: 0 1 auto; 
+}
+
+.myimage{
+    object-fit: contain;
+    min-height: 40%;
+    max-height: 80%;
+    flex: 1 1 auto;
+}
+
+
+
+
+
+
+

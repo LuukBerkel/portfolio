@@ -48,15 +48,15 @@
 
     <!--Video container holds all the video and other parrts for the container-->
     <div id="videoview">
-        <video id="intro" width="100%" style="position:absolute; z-index: -2;  object-fit: cover;  background-size: cover;
+        <video id="intro" width="100%" height="100hv" style="position:absolute; z-index: -2;  object-fit: cover;  background-size: cover;
         overflow: hidden;" autoplay muted loop>
             <source src="media/websiteintro.mp4" type="video/mp4">
             Your browser does not support HTML video.
         </video>
 
         <div style="text-align: center;">
-            <img id= "myimager" src="media/pattern.png" style="z-index: 0;" alt="idk" class="myimage" >
-                <p id="mytext" class="what" style="z-index: 1;" id="dis"></p>
+            <img id= "myimager" src="media/pattern.png" style="z-index: -1;" class="mypattern" >
+                <p id="mytext" class="what" style="z-index: 0;" id="dis"></p>
             </img>
         </div>
 
@@ -67,17 +67,18 @@
     </div>
 
     <!--Over me container-->
-    <div class="overmebox" id="overmeid">
+    <div class="background" id="overme">
         <div class="mylinediv"></div>
 
-        <div>
-            <h1 class="mytitle"> Over mij </h1>
-            <p><strong>Ik ben student op technische informatica op het avans in breda.
-                Hierbij leer ik verschillende richtingen die ik op kan gaan zoals visualisatie. 
-                Ook mobile development en embedded systems. Hierbij leer ik werken in verschillende ontwikkel
-                omgevingen.</strong>
-                
+
+        <div class="overmebox">
+            <p class="mytitle"><u>Over mij</u></p>
+            <p class="mytext">Als student Technische Informatica aan Avans in Breda specialiseer ik me voornamelijk in graphics, embedded systems, backend development en robotic engineering. 
+                Deze opleiding biedt een grondige verkenning van deze vakgebieden, waarbij ik leer om complexe grafische systemen te ontwerpen, efficiënte embedded systemen te ontwikkelen, robuuste backend-oplossingen te bouwen en innovatieve robotica-toepassingen te implementeren. 
+                Door middel van praktische projecten en intensieve samenwerkingen binnen diverse ontwikkelomgevingen, verwerf ik zowel theoretische kennis als waardevolle praktijkervaring. 
+                Dit stelt mij in staat om goed voorbereid te zijn op een dynamische en veelzijdige carrière in de technologische industrie, met een focus op cutting-edge technologieën zoals robotica.
             </p>
+            <img id="myimage" class="myimage" src="media/what.png" >
         </div>
     </div>
   
@@ -87,7 +88,7 @@
         <a href="#">About</a>
         <a href="#">Experience</a>
         <a href="#">Skills</a>
-      </div>
+    </div>
 
 </body>
 

@@ -6,6 +6,9 @@ switch (language) {
     break;
     case 'en' :
         switchLang("en")
+        break;
+    default:
+        switchLang("nl")
 }
 
 function buttonLang(){ 
