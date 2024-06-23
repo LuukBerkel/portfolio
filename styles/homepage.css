@@ -81,13 +81,15 @@
     margin: 30px 30px 0 30px;
 }
 
-.mytext {
+.mydesc {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 26px;
+    font-size: 20px;
     margin: 30px;
+    max-width: 100%; /* Ensure text doesn't overflow */
+    max-height: 100%;
 
     flex: 1; /* Allow text to take up remaining space */
-    flex-shrink: 1;
+    flex: 1 1 auto; /* Allow text to grow and shrink */
 }
 
 .myimage {

@@ -27,14 +27,15 @@ function rescaler(){
     // Calculting margin
     document.getElementById("mytext").style = "width:" +(document.getElementById("myimager").width -50) +"px; font-size:" + 35.0 * (  document.getElementById("myimager").height / 609.0) +"px;";
     document.getElementById("more").style = "font-size:" + 25.0 * (  document.getElementById("myimager").height / 609.0) +"px;";
+    document.getElementById("mydesc").style = "font-size:" + 23.0 * (  document.getElementById("myimager").height / 609.0) +"px;";
    
     // Changing overlay
     if (windowWidth > 1000){
         document.getElementById("name").style = "display: flex";
-        document.getElementById("myimage").style = "display: flex";
+        // document.getElementById("myimage").style = "display: flex";
     } else {
         document.getElementById("name").style = "display: none";
-        document.getElementById("myimage").style = "display: none";
+        // document.getElementById("myimage").style = "display: none";
     }
 
 }
