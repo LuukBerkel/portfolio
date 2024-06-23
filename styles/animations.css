@@ -14,7 +14,7 @@
     font-size: calc((3vw + 3vh) / 2);
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 600px) {
     #myimager {
         height: 80vh;
         max-width: 70vw; 
