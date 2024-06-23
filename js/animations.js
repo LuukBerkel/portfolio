@@ -32,10 +32,10 @@ function rescaler(){
     // Changing overlay
     if (windowWidth > 1000){
         document.getElementById("name").style = "display: flex";
-        // document.getElementById("myimage").style = "display: flex";
+        document.getElementById("mylist").src = "media/experience-hor.jpg";
     } else {
         document.getElementById("name").style = "display: none";
-        // document.getElementById("myimage").style = "display: none";
+        document.getElementById("mylist").src = "media/experience-ver.png";
     }
 
 }
