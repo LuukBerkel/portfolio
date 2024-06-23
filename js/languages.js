@@ -30,10 +30,13 @@ function switchLang(language){
         + "Door middel van praktische projecten en intensieve samenwerkingen binnen diverse ontwikkelomgevingen, verwerf ik zowel theoretische kennis als waardevolle praktijkervaring. "
         + "Dit stelt mij in staat om goed voorbereid te zijn op een dynamische en veelzijdige carrière in de technologische industrie, met een focus op cutting-edge technologieën zoals robotica.";
         document.getElementById("myexperience").innerHTML = "Ervaring";
+        document.getElementById("mycv").innerHTML = "Curriculum Vitae";
+        document.getElementById("mypdf").src = "media/cv-dutch.pdf" ;
 
         document.getElementById("navhome").innerHTML = "Startpagina";
         document.getElementById("navprofile").innerHTML = "Profiel";
         document.getElementById("navexperience").innerHTML = "Ervaring";
+        document.getElementById("navcv").innerHTML = "Curriculum Vitae";
     } else {
         document.getElementById("lang").innerHTML= "EN";
         document.getElementById("mytext").innerHTML = "Student Computer Science<br>Avans University of Applied Sciences<br><br>On my way to Software Engineer";
@@ -43,11 +46,16 @@ function switchLang(language){
         + "Through practical projects and intensive collaborations within diverse development environments, I acquire both theoretical knowledge and valuable practical experience. " 
         + "This prepares me to be well-equipped for a dynamic and versatile career in the technology industry, with a focus on cutting-edge technologies such as robotics.";
         document.getElementById("myexperience").innerHTML = "Experience";
+        document.getElementById("mycv").innerHTML = "Curriculum Vitae";
+        document.getElementById("mypdf").src = "media/cv-english.pdf" ;
+
 
         
         document.getElementById("navhome").innerHTML = "Home";
         document.getElementById("navprofile").innerHTML = "Profile";
         document.getElementById("navexperience").innerHTML = "Experience";
+        document.getElementById("navcv").innerHTML = "Curriculum Vitae";
+  
     }
 }
 
